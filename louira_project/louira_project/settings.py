@@ -35,7 +35,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "furniture.urls"  # Replace with your project name
+ROOT_URLCONF = "louira_project.urls"  # Replace with your project name
 
 TEMPLATES = [
     {
