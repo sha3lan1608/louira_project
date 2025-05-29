@@ -53,7 +53,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "your_project_name.wsgi.application"
+WSGI_APPLICATION = "louira_project.wsgi.application"
 
 # Database
 # For development, using SQLite
