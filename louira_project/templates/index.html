@@ -1,851 +1,1233 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOUIRA - Luxury Classic Furniture | Made in Egypt Excellence</title>
-    <meta name="description" content="Elevate your home with the finest Egyptian luxury furniture with classic design. Experience unparalleled quality and sophistication at LOUIRA.">
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOUIRA - Luxury Egyptian Furniture | Handcrafted Excellence</title>
+    <meta
+      name="description"
+      content="Discover LOUIRA's exclusive collection of luxury Egyptian furniture. Handcrafted masterpieces that blend traditional artistry with contemporary design."
+    />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .font-playfair { font-family: 'Playfair Display', serif; }
-        .gold-gradient { background: linear-gradient(135deg, #b8860b, #daa520, #ffd700); }
-        .gold-text { color: #b8860b; }
-        .dark .gold-text { color: #ffd700; }
-        .hero-overlay { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)); }
-        .scroll-smooth { scroll-behavior: smooth; }
-        .animate-fadeIn { animation: fadeIn 0.6s ease-in-out; }
-        .animate-slideUp { animation: slideUp 0.8s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.05); }
-        .luxury-shadow { box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .dark .luxury-shadow { box-shadow: 0 20px 40px rgba(255,255,255,0.1); }
-    </style>
-</head>
-<body class="scroll-smooth transition-colors duration-300 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-    
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg transition-all duration-300">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 gold-gradient rounded-lg flex items-center justify-center">
-                        <div class="w-8 h-8 bg-white rounded-sm flex items-center justify-center">
-                            <div class="w-6 h-6 gold-gradient rounded-sm relative">
-                                <div class="absolute inset-1 bg-white rounded-sm"></div>
-                                <div class="absolute top-1 left-1 w-2 h-4 gold-gradient"></div>
-                                <div class="absolute top-1 right-1 w-2 h-2 gold-gradient"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="text-2xl font-playfair font-bold gold-text">LOUIRA</span>
-                </div>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
 
-                <!-- Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#home" class="hover:text-yellow-600 transition-colors duration-300">Home</a>
-                    <a href="#company" class="hover:text-yellow-600 transition-colors duration-300">Company</a>
-                    <div class="relative group">
-                        <a href="#collections" class="hover:text-yellow-600 transition-colors duration-300 flex items-center">
-                            Collections <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
-                        </a>
-                        <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <a href="#masterpiece" class="block px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-t-lg">Masterpiece</a>
-                            <a href="#luxury-living" class="block px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700">Luxury Living</a>
-                            <a href="#bedroom" class="block px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700">Bedroom</a>
-                            <a href="#dining" class="block px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-b-lg">Dining Room</a>
-                        </div>
-                    </div>
-                    <a href="#projects" class="hover:text-yellow-600 transition-colors duration-300">Projects</a>
-                    <a href="#news" class="hover:text-yellow-600 transition-colors duration-300">News</a>
-                    <a href="#contact" class="hover:text-yellow-600 transition-colors duration-300">Contact</a>
-                </nav>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-                <!-- Theme Toggle & Mobile Menu -->
-                <div class="flex items-center space-x-4">
-                    <button id="themeToggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
-                        <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 2L13.09 8.26L20 9L14 14.74L15.18 21.02L10 18L4.82 21.02L6 14.74L0 9L6.91 8.26L10 2Z"/>
-                        </svg>
-                        <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-                        </svg>
-                    </button>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="lg:hidden mt-4 pb-4 hidden">
-                <nav class="flex flex-col space-y-2">
-                    <a href="#home" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Home</a>
-                    <a href="#company" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Company</a>
-                    <a href="#collections" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Collections</a>
-                    <a href="#projects" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Projects</a>
-                    <a href="#news" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">News</a>
-                    <a href="#contact" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">Contact</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-amber-800 to-yellow-600"></div>
-        <div class="hero-overlay absolute inset-0"></div>
-        
-        <div class="relative z-10 text-center text-white px-4 animate-fadeIn">
-            <h1 class="text-5xl md:text-7xl font-playfair font-bold mb-6">
-                CLASSIC EGYPTIAN FURNITURE
-            </h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">
-                Luxury Home Interior – Who we are
-            </p>
-            <p class="text-lg mb-12 max-w-4xl mx-auto leading-relaxed">
-                We design, manufacture and distribute high-end Made in Egypt furniture all over the world and we are highly specialized in bespoke luxury classic furniture craftsmanship.
-            </p>
-            <p class="text-lg mb-12 max-w-4xl mx-auto leading-relaxed">
-                From Living Rooms (Sofas, Armchairs, Consoles, and Bookcases) and Dining Rooms (Tables, Chairs, Sideboard) to Bedrooms and Home Offices: our Luxury Furnishing are completely bespoke.
-            </p>
-            <a href="#contact" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover-scale luxury-shadow">
-                Contact Us
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300 font-sans"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 lg:h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a
+              href="/"
+              class="text-2xl lg:text-3xl font-serif font-bold text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors duration-300"
+            >
+              LOUIRA
             </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/collections/" class="nav-link">Collections</a>
+            <a href="/projects/" class="nav-link">Projects</a>
+            <a href="/news/" class="nav-link">News</a>
+            <a href="/company/" class="nav-link">Company</a>
+            <a href="/contact/" class="nav-link">Contact</a>
+          </div>
+
+          <!-- Theme Toggle & Mobile Menu -->
+          <div class="flex items-center space-x-4">
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
+            >
+              <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+              <i class="fas fa-moon text-blue-400 hidden dark:block"></i>
+            </button>
+
+            <!-- Search -->
+            <button
+              id="search-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobile-menu-toggle"
+              class="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </div>
-        
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900"
+      >
+        <div class="px-4 py-2 space-y-1">
+          <a href="/" class="mobile-nav-link">Home</a>
+          <a href="/collections/" class="mobile-nav-link">Collections</a>
+          <a href="/projects/" class="mobile-nav-link">Projects</a>
+          <a href="/news/" class="mobile-nav-link">News</a>
+          <a href="/company/" class="mobile-nav-link">Company</a>
+          <a href="/contact/" class="mobile-nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search Modal -->
+    <div
+      id="search-modal"
+      class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+    >
+      <div class="flex items-start justify-center min-h-screen pt-20 px-4">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-2xl p-6"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold">Search LOUIRA</h3>
+            <button
+              id="search-close"
+              class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <form action="/search/" method="get">
+            <input
+              type="text"
+              name="q"
+              placeholder="Search collections, furniture, news..."
+              class="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-700 text-lg"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-16 lg:pt-20">
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+      >
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5 dark:opacity-10">
+          <div
+            class="absolute inset-0"
+            style="
+              background-image: url('data:image/svg+xml,%3Csvg width=%2760%27 height=%2760%27 viewBox=%270 0 60 60%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg fill=%27none%27 fill-rule=%27evenodd%27%3E%3Cg fill=%27%23f59e0b%27 fill-opacity=%270.1%27%3E%3Cpath d=%27M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            "
+          ></div>
+        </div>
+
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <div class="hero-content">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight font-serif"
+            >
+              <span class="hero-gradient-text"> Luxury Egyptian </span>
+              <br />
+              <span class="text-gray-900 dark:text-white"
+                >Furniture Excellence</span
+              >
+            </h1>
+
+            <p
+              class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+            >
+              {% if company_info %} {{ company_info.tagline }} {% else %} We
+              design, manufacture and distribute high-end Made in Egypt
+              furniture all over the world. {% endif %}
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            >
+              <a href="/collections/" class="btn-primary group">
+                <span>Explore Collections</span>
+                <i
+                  class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                ></i>
+              </a>
+              <a href="/contact/" class="btn-secondary">
+                <i class="fas fa-phone mr-2"></i>
+                <span>Custom Project</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Floating Elements -->
+          <div class="floating-element floating-element-1"></div>
+          <div class="floating-element floating-element-2"></div>
+          <div class="floating-element floating-element-3"></div>
+        </div>
+
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+        <div
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator"
+        >
+          <div
+            class="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center"
+          >
+            <div
+              class="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-pulse"
+            ></div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="company" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16 animate-slideUp">
-                    <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 gold-text">Innovation, Research and Love</h2>
-                    <p class="text-gray-300 leading-relaxed">
-                        LOUIRA, located in Damietta, in the heart of Egypt, is known worldwide for its production of High-Quality Egyptian Furniture combining traditional craftsmanship with modern luxury.
+      <!-- Featured Collections Section -->
+      <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 section-fade-in">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white font-serif"
+            >
+              Featured
+              <span class="text-yellow-600 dark:text-yellow-400"
+                >Collections</span
+              >
+            </h2>
+            <p
+              class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+            >
+              Discover our carefully curated collections of luxury furniture,
+              each piece crafted with exceptional attention to detail and
+              Egyptian heritage.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for collection in featured_collections %}
+            <div class="collection-card group">
+              <div class="relative overflow-hidden rounded-t-2xl">
+                {% if collection.image %}
+                <img
+                  src="{{ collection.image.url }}"
+                  alt="{{ collection.name }}"
+                  class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                {% else %}
+                <div
+                  class="w-full h-64 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900 dark:to-yellow-800 flex items-center justify-center"
+                >
+                  <i
+                    class="fas fa-image text-4xl text-yellow-400 dark:text-yellow-600"
+                  ></i>
+                </div>
+                {% endif %}
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                >
+                  <a
+                    href="/collections/{{ collection.pk }}/"
+                    class="btn-primary-sm"
+                  >
+                    View Collection
+                  </a>
+                </div>
+              </div>
+              <div class="p-6 bg-white dark:bg-gray-800 rounded-b-2xl">
+                <h3
+                  class="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors duration-300 font-serif"
+                >
+                  {{ collection.name }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                  {{ collection.description }}
+                </p>
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-sm text-yellow-600 dark:text-yellow-400 font-medium"
+                  >
+                    {{ collection.items.count }} Items
+                  </span>
+                  <a
+                    href="/collections/{{ collection.pk }}/"
+                    class="text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors duration-300"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+              <i
+                class="fas fa-box-open text-4xl text-gray-400 dark:text-gray-600 mb-4"
+              ></i>
+              <p class="text-gray-600 dark:text-gray-400">
+                No collections available yet.
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="text-center mt-12 section-fade-in">
+            <a href="/collections/" class="btn-secondary">
+              <span>View All Collections</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="section-fade-in">
+              <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white font-serif"
+              >
+                Crafting
+                <span class="text-yellow-600 dark:text-yellow-400"
+                  >Excellence</span
+                >
+                <br />Since Generations
+              </h2>
+              <div class="space-y-6 text-gray-600 dark:text-gray-300">
+                <p class="text-lg leading-relaxed">
+                  {% if company_info %} {{
+                  company_info.about_text|truncatewords:50 }} {% else %} At
+                  LOUIRA, we blend traditional Egyptian craftsmanship with
+                  contemporary design to create furniture that stands the test
+                  of time. Each piece tells a story of heritage, skill, and
+                  passion. {% endif %}
+                </p>
+                {% if company_info and company_info.founder_quote %}
+                <blockquote
+                  class="border-l-4 border-yellow-500 pl-6 italic text-lg"
+                >
+                  "{{ company_info.founder_quote }}"
+                </blockquote>
+                {% endif %}
+              </div>
+              <div class="mt-8">
+                <a href="/company/" class="btn-primary">
+                  <span>Learn More</span>
+                  <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="relative section-fade-in">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <div class="feature-card">
+                    <i
+                      class="fas fa-hammer text-2xl text-yellow-600 dark:text-yellow-400 mb-3"
+                    ></i>
+                    <h3
+                      class="font-semibold text-gray-900 dark:text-white mb-2"
+                    >
+                      Handcrafted
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                      Every piece meticulously crafted by skilled artisans
                     </p>
+                  </div>
+                  <div class="feature-card">
+                    <i
+                      class="fas fa-leaf text-2xl text-yellow-600 dark:text-yellow-400 mb-3"
+                    ></i>
+                    <h3
+                      class="font-semibold text-gray-900 dark:text-white mb-2"
+                    >
+                      Sustainable
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                      Eco-friendly materials and responsible sourcing
+                    </p>
+                  </div>
                 </div>
-
-                <!-- Collections -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-yellow-400">Collections</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#masterpiece" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Masterpiece</a></li>
-                        <li><a href="#luxury-living" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Luxury Living</a></li>
-                        <li><a href="#bedroom" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Bedroom</a></li>
-                        <li><a href="#dining" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Dining Room</a></li>
-                        <li><a href="#office" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Home Office</a></li>
-                        <li><a href="#decorative" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Decorative Objects</a></li>
-                    </ul>
+                <div class="space-y-4 mt-8">
+                  <div class="feature-card">
+                    <i
+                      class="fas fa-crown text-2xl text-yellow-600 dark:text-yellow-400 mb-3"
+                    ></i>
+                    <h3
+                      class="font-semibold text-gray-900 dark:text-white mb-2"
+                    >
+                      Luxury
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                      Premium materials and exclusive designs
+                    </p>
+                  </div>
+                  <div class="feature-card">
+                    <i
+                      class="fas fa-globe text-2xl text-yellow-600 dark:text-yellow-400 mb-3"
+                    ></i>
+                    <h3
+                      class="font-semibold text-gray-900 dark:text-white mb-2"
+                    >
+                      Global
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                      Delivering Egyptian excellence worldwide
+                    </p>
+                  </div>
                 </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-yellow-400">Services</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#custom-projects" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Custom Projects</a></li>
-                        <li><a href="#interior-design" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Interior Design</a></li>
-                        <li><a href="#consultation" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Design Consultation</a></li>
-                        <li><a href="#showroom" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Showroom Visits</a></li>
-                        <li><a href="#delivery" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Worldwide Delivery</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-yellow-400">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                            </svg>
-                            <span class="text-gray-300">+20 XXX XXX XXXX</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                            </svg>
-                            <span class="text-gray-300">info@louira.com</span>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <svg class="w-5 h-5 text-yellow-400 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-                            </svg>
-                            <span class="text-gray-300">Damietta, Egypt<br/>Furniture Manufacturing District</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Business Hours -->
-                    <div class="mt-6">
-                        <h4 class="text-sm font-semibold mb-3 text-yellow-400">Opening Hours</h4>
-                        <p class="text-gray-300 text-sm">
-                            Saturday to Thursday<br/>
-                            8:00 AM – 6:00 PM
-                        </p>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="mt-6">
-                        <h4 class="text-sm font-semibold mb-3 text-yellow-400">Follow Us</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors duration-300">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors duration-300">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors duration-300">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.887 2.748.097.118.112.219.083.402-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors duration-300">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-
-            <!-- Bottom Footer -->
-            <div class="border-t border-gray-800 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="mb-4 md:mb-0">
-                        <p class="text-gray-400 text-sm">
-                            © 2025 LOUIRA. All rights reserved. | 100% Made in Egypt
-                        </p>
-                    </div>
-                    <div class="flex space-x-6 text-sm">
-                        <a href="#privacy" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300">Privacy Policy</a>
-                        <a href="#terms" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300">Terms of Service</a>
-                        <a href="#sitemap" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300">Sitemap</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 section-fade-in">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white font-serif"
+            >
+              Recent
+              <span class="text-yellow-600 dark:text-yellow-400">Projects</span>
+            </h2>
+            <p
+              class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+            >
+              Explore our latest completed projects showcasing the beauty and
+              craftsmanship of LOUIRA furniture in real settings.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for project in featured_projects %}
+            <div class="project-card group">
+              {% if project.main_image %}
+              <img
+                src="{{ project.main_image.url }}"
+                alt="{{ project.title }}"
+                class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              {% else %}
+              <div
+                class="w-full h-80 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900 dark:to-yellow-800 flex items-center justify-center"
+              >
+                <i
+                  class="fas fa-building text-4xl text-yellow-400 dark:text-yellow-600"
+                ></i>
+              </div>
+              {% endif %}
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <span
+                  class="inline-block px-3 py-1 bg-yellow-600 text-xs font-medium rounded-full mb-3"
+                >
+                  {{ project.get_project_type_display }}
+                </span>
+                <h3 class="text-xl font-bold mb-2 font-serif">
+                  {{ project.title }}
+                </h3>
+                <p class="text-gray-200 text-sm mb-3">{{ project.location }}</p>
+                <a
+                  href="/projects/{{ project.slug }}/"
+                  class="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
+                >
+                  <span class="mr-2">View Project</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+              <i
+                class="fas fa-building text-4xl text-gray-400 dark:text-gray-600 mb-4"
+              ></i>
+              <p class="text-gray-600 dark:text-gray-400">
+                No featured projects available yet.
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="text-center mt-12 section-fade-in">
+            <a href="/projects/" class="btn-secondary">
+              <span>View All Projects</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest News Section -->
+      <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 section-fade-in">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white font-serif"
+            >
+              Latest
+              <span class="text-yellow-600 dark:text-yellow-400">News</span>
+            </h2>
+            <p
+              class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+            >
+              Stay updated with the latest trends, insights, and stories from
+              the world of luxury furniture design.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for article in latest_news %}
+            <article class="news-card">
+              {% if article.image %}
+              <img
+                src="{{ article.image.url }}"
+                alt="{{ article.title }}"
+                class="w-full h-48 object-cover rounded-t-2xl"
+              />
+              {% else %}
+              <div
+                class="w-full h-48 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900 dark:to-yellow-800 flex items-center justify-center rounded-t-2xl"
+              >
+                <i
+                  class="fas fa-newspaper text-4xl text-yellow-400 dark:text-yellow-600"
+                ></i>
+              </div>
+              {% endif %}
+              <div class="p-6">
+                <div
+                  class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3"
+                >
+                  <time datetime="{{ article.published_date|date:'Y-m-d' }}">
+                    {{ article.published_date|date:"M d, Y" }}
+                  </time>
+                  <span class="mx-2">•</span>
+                  <span>{{ article.author }}</span>
+                </div>
+                <h3
+                  class="text-xl font-bold mb-3 text-gray-900 dark:text-white hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors duration-300 font-serif"
+                >
+                  <a href="/news/{{ article.slug }}/">{{ article.title }}</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                  {{ article.excerpt }}
+                </p>
+                <a
+                  href="/news/{{ article.slug }}/"
+                  class="inline-flex items-center text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 font-medium transition-colors duration-300"
+                >
+                  <span class="mr-2">Read More</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+              <i
+                class="fas fa-newspaper text-4xl text-gray-400 dark:text-gray-600 mb-4"
+              ></i>
+              <p class="text-gray-600 dark:text-gray-400">
+                No news articles available yet.
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="text-center mt-12 section-fade-in">
+            <a href="/news/" class="btn-secondary">
+              <span>View All News</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 cta-section relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+          <div
+            class="absolute inset-0"
+            style="
+              background-image: url('data:image/svg+xml,%3Csvg width=%2780%27 height=%2780%27 viewBox=%270 0 80 80%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg fill=%27none%27 fill-rule=%27evenodd%27%3E%3Cg fill=%27%23ffffff%27 fill-opacity=%270.1%27%3E%3Cpath d=%27M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z%27 fill-rule=%27nonzero%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            "
+          ></div>
+        </div>
+
+        <div
+          class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white"
+        >
+          <div class="section-fade-in">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 font-serif"
+            >
+              Ready to Create Your
+              <br />
+              <span class="text-yellow-100">Dream Space?</span>
+            </h2>
+            <p
+              class="text-lg sm:text-xl text-yellow-100 mb-8 max-w-2xl mx-auto"
+            >
+              Let our expert team help you design and create the perfect
+              furniture pieces for your unique space.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <a href="/contact/" class="btn-white group">
+                <span>Start Your Project</span>
+                <i
+                  class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                ></i>
+              </a>
+              <a href="/collections/" class="btn-outline-white">
+                <span>Browse Collections</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section
+        class="py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="section-fade-in">
+            <h3
+              class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900 dark:text-white font-serif"
+            >
+              Stay Updated with LOUIRA
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-8">
+              Subscribe to our newsletter for the latest collections, design
+              tips, and exclusive offers.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="flex-1 px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-800 dark:text-white"
+              />
+              <button type="submit" class="btn-primary whitespace-nowrap">
+                <span>Subscribe</span>
+                <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="col-span-1 lg:col-span-2">
+            <h3 class="text-2xl font-serif font-bold text-yellow-400 mb-4">
+              LOUIRA
+            </h3>
+            <p class="text-gray-300 mb-6">
+              {% if company_info %}{{ company_info.tagline }}{% else %}Luxury
+              Egyptian Furniture Excellence{% endif %}
+            </p>
+            <div class="flex space-x-4">
+              {% if company_info.social_facebook %}
+              <a href="{{ company_info.social_facebook }}" class="social-icon"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              {% endif %} {% if company_info.social_instagram %}
+              <a href="{{ company_info.social_instagram }}" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              {% endif %} {% if company_info.social_twitter %}
+              <a href="{{ company_info.social_twitter }}" class="social-icon"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              {% endif %} {% if company_info.social_pinterest %}
+              <a href="{{ company_info.social_pinterest }}" class="social-icon"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+              {% endif %}
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="/collections/" class="footer-link">Collections</a>
+              </li>
+              <li><a href="/projects/" class="footer-link">Projects</a></li>
+              <li><a href="/news/" class="footer-link">News</a></li>
+              <li><a href="/company/" class="footer-link">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2 text-gray-300">
+              {% if company_info %}
+              <li>
+                <i class="fas fa-map-marker-alt mr-2"></i>{{
+                company_info.address|slice:":50" }}...
+              </li>
+              <li><i class="fas fa-phone mr-2"></i>{{ company_info.phone }}</li>
+              <li>
+                <i class="fas fa-envelope mr-2"></i>{{ company_info.email }}
+              </li>
+              {% else %}
+              <li><i class="fas fa-map-marker-alt mr-2"></i>Damietta, Egypt</li>
+              <li><i class="fas fa-phone mr-2"></i>+20 XXX XXX XXXX</li>
+              <li><i class="fas fa-envelope mr-2"></i>info@louira.com</li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; {% now "Y" %} LOUIRA. All rights reserved. | Luxury Egyptian
+            Furniture
+          </p>
+        </div>
+      </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 gold-gradient rounded-full shadow-lg flex items-center justify-center text-white opacity-0 invisible transition-all duration-300 hover-scale z-50">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-        </svg>
-    </button>
-
+    <!-- JavaScript -->
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        html.classList.toggle('dark', currentTheme === 'dark');
+      // Theme Toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      const html = document.documentElement;
 
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-        });
+      // Check for saved theme preference or default to 'light'
+      const currentTheme = localStorage.getItem("theme") || "light";
+      html.classList.toggle("dark", currentTheme === "dark");
 
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+      themeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        const theme = html.classList.contains("dark") ? "dark" : "light";
+        localStorage.setItem("theme", theme);
+      });
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      // Mobile Menu Toggle
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
+      mobileMenuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-        // Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.remove('opacity-0', 'invisible');
-            } else {
-                backToTop.classList.add('opacity-0', 'invisible');
-            }
-        });
+      // Search Modal
+      const searchToggle = document.getElementById("search-toggle");
+      const searchModal = document.getElementById("search-modal");
+      const searchClose = document.getElementById("search-close");
 
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+      searchToggle.addEventListener("click", () => {
+        searchModal.classList.remove("hidden");
+      });
 
-        // Header Background on Scroll
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 100) {
-                header.classList.add('bg-white/98', 'dark:bg-gray-900/98');
-            } else {
-                header.classList.remove('bg-white/98', 'dark:bg-gray-900/98');
-            }
-        });
+      searchClose.addEventListener("click", () => {
+        searchModal.classList.add("hidden");
+      });
 
-        // Animate elements on scroll
+      searchModal.addEventListener("click", (e) => {
+        if (e.target === searchModal) {
+          searchModal.classList.add("hidden");
+        }
+      });
+
+      // Intersection Observer for fade-in animations
+      document.addEventListener("DOMContentLoaded", function () {
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
         };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-slideUp');
-                }
-            });
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.animationDelay = "0s";
+              entry.target.classList.add("animate");
+            }
+          });
         }, observerOptions);
 
-        // Observe all sections for animation
-        document.querySelectorAll('section > div').forEach(el => {
-            observer.observe(el);
+        // Observe all fade-in elements
+        document.querySelectorAll(".section-fade-in").forEach((el, index) => {
+          el.style.animationDelay = `${index * 0.1}s`;
+          observer.observe(el);
         });
 
-        // Form Submission (placeholder)
-        document.querySelector('form').addEventListener('submit', (e) => {
+        // Newsletter form submission
+        const newsletterForm = document.querySelector("form");
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", function (e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-        });
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+              alert("Thank you for subscribing to our newsletter!");
+              this.reset();
+            }
+          });
+        }
 
-        // Collection Cards Click Event
-        document.querySelectorAll('[id="collections"] .group').forEach(card => {
-            card.addEventListener('click', () => {
-                const title = card.querySelector('h3').textContent;
-                alert(`Explore our ${title} - Coming Soon!`);
-            });
-        });
+        // Add loading states for images
+        document.querySelectorAll("img").forEach((img) => {
+          img.addEventListener("load", function () {
+            this.style.opacity = "1";
+          });
 
-        // News Articles Click Event
-        document.querySelectorAll('[id="news"] article').forEach(article => {
-            article.addEventListener('click', () => {
-                const title = article.querySelector('h3').textContent;
-                alert(`Reading: ${title} - Full article coming soon!`);
-            });
+          img.addEventListener("error", function () {
+            this.style.opacity = "0.5";
+          });
+
+          // Set initial opacity
+          img.style.opacity = "0";
+          img.style.transition = "opacity 0.3s ease";
         });
+      });
     </script>
-</body>
-</html>="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Every year a new collection to renew and to dream. Our exclusive collections include precious materials such as malachite, mother of pearl and fine marbles, tridimensional carvings and artistic products.
-                    </p>
-                </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-                    <div class="animate-slideUp">
-                        <div class="bg-gradient-to-br from-amber-100 to-yellow-100 dark:from-amber-900 dark:to-yellow-900 p-8 rounded-2xl luxury-shadow">
-                            <h3 class="text-2xl font-playfair font-bold mb-4 gold-text">Our Philosophy</h3>
-                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                                Our products represent the best quality of classic furniture and decorations and they are studied to make your wish come true and to create that unique design that everyone dreams of living in their own luxury home.
-                            </p>
-                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                                Open, discover and dream.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="animate-slideUp">
-                        <div class="bg-gray-100 dark:bg-gray-800 p-8 rounded-2xl luxury-shadow">
-                            <blockquote class="text-lg italic text-gray-700 dark:text-gray-300 leading-relaxed">
-                                "I am really proud to carry on the family business and to continue the hard work of my predecessors. I am happy to have brought innovation to the company and to have developed the authentic LOUIRA style. The search for details, the love for perfection and the uniqueness of the design make LOUIRA Group the reference point in the luxury home decoration market."
-                            </blockquote>
-                            <cite class="block mt-4 text-right gold-text font-semibold">- LOUIRA Founder</cite>
-                        </div>
-                    </div>
-                </div>
+    <style>
+      /* Navigation Styles */
+      .nav-link {
+        color: rgb(55, 65, 81);
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+      }
 
-                <!-- Made in Egypt Certification -->
-                <div class="text-center bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 p-8 rounded-2xl luxury-shadow">
-                    <div class="inline-flex items-center justify-center w-20 h-20 gold-gradient rounded-full mb-4">
-                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-playfair font-bold gold-text mb-4">100% Made in Egypt</h3>
-                    <p class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-                        LOUIRA has been awarded the esteemed "100% Made in Egypt" certification. This prestigious recognition underscores the company's commitment to maintaining the highest standards of Egyptian excellence.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+      .dark .nav-link {
+        color: rgb(209, 213, 219);
+      }
 
-    <!-- Collections Preview -->
-    <section id="collections" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 gold-text">Our Collections</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Discover our exclusive collections crafted with the finest materials and traditional techniques
-                </p>
-            </div>
+      .nav-link:hover {
+        color: rgb(217, 119, 6);
+      }
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-64 bg-gradient-to-br from-amber-200 to-yellow-300 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-2xl font-playfair font-bold">Masterpiece Collection</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 dark:text-gray-300">Exquisite handcrafted pieces that represent the pinnacle of luxury furniture design.</p>
-                    </div>
-                </div>
+      .dark .nav-link:hover {
+        color: rgb(251, 191, 36);
+      }
 
-                <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-64 bg-gradient-to-br from-amber-300 to-yellow-400 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-2xl font-playfair font-bold">Living Room</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 dark:text-gray-300">Elegant sofas, armchairs, and consoles designed for sophisticated living spaces.</p>
-                    </div>
-                </div>
+      .nav-link:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #f59e0b, #d97706);
+        border-radius: 1px;
+      }
 
-                <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-amber-500 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-2xl font-playfair font-bold">Dining Room</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 dark:text-gray-300">Magnificent dining tables, chairs, and sideboards for memorable gatherings.</p>
-                    </div>
-                </div>
+      .mobile-nav-link {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        color: rgb(55, 65, 81);
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
 
-                <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-64 bg-gradient-to-br from-amber-400 to-yellow-500 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-2xl font-playfair font-bold">Bedroom</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 dark:text-gray-300">Luxurious beds and bedroom furniture for the ultimate comfort and style.</p>
-                    </div>
-                </div>
+      .dark .mobile-nav-link {
+        color: rgb(209, 213, 219);
+      }
 
-                <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-64 bg-gradient-to-br from-yellow-500 to-amber-600 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-2xl font-playfair font-bold">Home Office</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 dark:text-gray-300">Professional office furniture that combines functionality with elegance.</p>
-                    </div>
-                </div>
+      .mobile-nav-link:hover {
+        color: rgb(217, 119, 6);
+        background-color: rgb(249, 250, 251);
+      }
 
-                <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-64 bg-gradient-to-br from-amber-500 to-yellow-600 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-2xl font-playfair font-bold">Decorative Objects</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-gray-600 dark:text-gray-300">Artistic decorative pieces that add the perfect finishing touch to any space.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      .dark .mobile-nav-link:hover {
+        color: rgb(251, 191, 36);
+        background-color: rgb(31, 41, 55);
+      }
 
-    <!-- News Section -->
-    <section id="news" class="py-20 bg-white dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 gold-text">Latest News</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Innovation to grow, research to develop: we never stop daring and keep on setting new goals to be achieved.
-                </p>
-            </div>
+      /* Custom Styles */
+      .hero-gradient-text {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <article class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-48 bg-gradient-to-br from-amber-200 to-yellow-300"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-playfair font-bold mb-3 group-hover:text-yellow-600 transition-colors duration-300">
-                            Discover the artistry of LOUIRA
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            From bespoke classic furniture to innovative design solutions, explore our latest masterpieces...
-                        </p>
-                        <span class="text-yellow-600 font-semibold">READ MORE</span>
-                    </div>
-                </article>
+      .hero-content {
+        animation: slideUp 1s ease-out;
+      }
 
-                <article class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-48 bg-gradient-to-br from-amber-300 to-yellow-400"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-playfair font-bold mb-3 group-hover:text-yellow-600 transition-colors duration-300">
-                            New Collection Launch
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Introducing our latest collection featuring precious materials and innovative craftsmanship...
-                        </p>
-                        <span class="text-yellow-600 font-semibold">READ MORE</span>
-                    </div>
-                </article>
+      .floating-element {
+        position: absolute;
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+      }
 
-                <article class="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden luxury-shadow hover-scale group cursor-pointer">
-                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-amber-500"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-playfair font-bold mb-3 group-hover:text-yellow-600 transition-colors duration-300">
-                            The Psychology of Luxury
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Explore the motivations, emotions, and perceptions that drive luxury furniture design...
-                        </p>
-                        <span class="text-yellow-600 font-semibold">READ MORE</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+      .floating-element-1 {
+        top: 20%;
+        left: 10%;
+        width: 80px;
+        height: 80px;
+        background: rgba(245, 158, 11, 0.2);
+        animation-delay: 0s;
+      }
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 gold-text">Get In Touch</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300">
-                        If you want to see more classic Egyptian furniture and luxury classic furniture or if you want to create a tailor made project for your dream house, fill the form below.
-                    </p>
-                </div>
+      .floating-element-2 {
+        bottom: 20%;
+        right: 10%;
+        width: 120px;
+        height: 120px;
+        background: rgba(245, 158, 11, 0.3);
+        animation-delay: -2s;
+      }
 
-                <form class="bg-white dark:bg-gray-900 p-8 rounded-2xl luxury-shadow">
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-sm font-semibold mb-2 gold-text">First Name</label>
-                            <input type="text" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-800">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold mb-2 gold-text">Last Name</label>
-                            <input type="text" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-800">
-                        </div>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-sm font-semibold mb-2 gold-text">Email</label>
-                            <input type="email" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-800">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold mb-2 gold-text">Phone</label>
-                            <input type="tel" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-800">
-                        </div>
-                    </div>
+      .floating-element-3 {
+        top: 50%;
+        left: 25%;
+        width: 60px;
+        height: 60px;
+        background: rgba(245, 158, 11, 0.4);
+        animation-delay: -4s;
+      }
 
-                    <div class="mb-6">
-                        <label class="block text-sm font-semibold mb-2 gold-text">Subject</label>
-                        <select class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-800">
-                            <option>General Inquiry</option>
-                            <option>Custom Project</option>
-                            <option>Collection Information</option>
-                            <option>Showroom Visit</option>
-                        </select>
-                    </div>
+      .scroll-indicator {
+        animation: bounce 2s infinite;
+      }
 
-                    <div class="mb-6">
-                        <label class="block text-sm font-semibold mb-2 gold-text">Message</label>
-                        <textarea rows="5" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 dark:bg-gray-800" placeholder="Tell us about your dream project..."></textarea>
-                    </div>
+      .section-fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
 
-                    <button type="submit" class="w-full gold-gradient text-white py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity duration-300 luxury-shadow">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+      .collection-card {
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(229, 231, 235, 1);
+      }
 
-<!-- Footer -->
-<footer class="bg-gray-900 dark:bg-black text-white py-16">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8 mb-12">
-            <!-- Company Info -->
-            <div>
-                <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center">
-                        <div class="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
-                            <div class="w-4 h-4 gold-gradient rounded-sm relative">
-                                <div class="absolute inset-0.5 bg-white rounded-sm"></div>
-                                <div class="absolute top-0.5 left-0.5 w-1.5 h-3 gold-gradient"></div>
-                                <div class="absolute top-0.5 right-0.5 w-1.5 h-1.5 gold-gradient"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="text-xl font-playfair font-bold text-yellow-400">LOUIRA</span>
-                </div>
-                <p class="text-gray-300 leading-relaxed">
-                    LOUIRA, located in Damietta, in the heart of Egypt, is known worldwide for its production of High-Quality Egyptian Furniture combining traditional craftsmanship with modern luxury.
-                </p>
-            </div>
+      .dark .collection-card {
+        background: rgb(31, 41, 55);
+        border-color: rgb(55, 65, 81);
+      }
 
-            <!-- Collections -->
-            <div>
-                <h3 class="text-lg font-semibold mb-6 text-yellow-400">Collections</h3>
-                <ul class="space-y-3">
-                    <li><a href="#masterpiece" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Masterpiece</a></li>
-                    <li><a href="#luxury-living" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Luxury Living</a></li>
-                    <li><a href="#bedroom" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Bedroom</a></li>
-                    <li><a href="#dining" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Dining Room</a></li>
-                    <li><a href="#office" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Home Office</a></li>
-                    <li><a href="#decorative" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Decorative Objects</a></li>
-                </ul>
-            </div>
+      .collection-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
 
-            <!-- Services -->
-            <div>
-                <h3 class="text-lg font-semibold mb-6 text-yellow-400">Services</h3>
-                <ul class="space-y-3">
-                    <li><a href="#custom-projects" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Custom Projects</a></li>
-                    <li><a href="#interior-design" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Interior Design</a></li>
-                    <li><a href="#consultation" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Design Consultation</a></li>
-                    <li><a href="#showroom" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Showroom Visits</a></li>
-                    <li><a href="#delivery" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Worldwide Delivery</a></li>
-                </ul>
-            </div>
+      .feature-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
 
-            <!-- Contact Info -->
-            <div>
-                <h3 class="text-lg font-semibold mb-6 text-yellow-400">Contact Information</h3>
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                        </svg>
-                        <span class="text-gray-300">+20 XXX XXX XXXX</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                        </svg>
-                        <span class="text-gray-300">info@louira.com</span>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <svg class="w-5 h-5 text-yellow-400 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-                        </svg>
-                        <span class="text-gray-300">Damietta, Egypt<br/>Furniture Manufacturing District</span>
-                    </div>
-                </div>
-                
-                <!-- Business Hours -->
-                <div class="mt-6">
-                    <h4 class="text-sm font-semibold mb-3 text-yellow-400">Opening Hours</h4>
-                    <p class="text-gray-300 text-sm">
-                        Saturday to Thursday<br/>
-                        8:00 AM – 6:00 PM
-                    </p>
-                </div>
+      .dark .feature-card {
+        background: rgb(55, 65, 81);
+      }
 
-                <!-- Social Media -->
-                <div class="mt-6">
-                    <h4 class="text-sm font-semibold mb-3 text-yellow-400">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors duration-300">
-                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors duration-300">
-                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors duration-300">
-                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.887 2.748.097.118.112.219.083.402-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors duration-300">
-                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
 
-        <!-- Bottom Footer -->
-        <div class="border-t border-gray-800 pt-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-gray-400 text-sm">
-                        © 2025 LOUIRA. All rights reserved. | 100% Made in Egypt
-                    </p>
-                </div>
-                <div class="flex space-x-6 text-sm">
-                    <a href="#privacy" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300">Privacy Policy</a>
-                    <a href="#terms" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300">Terms of Service</a>
-                    <a href="#sitemap" class="text-gray-400 hover:text-yellow-400 transition-colors duration-300">Sitemap</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+      .project-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
 
-<!-- Back to Top Button -->
-<button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 gold-gradient rounded-full shadow-lg flex items-center justify-center text-white opacity-0 invisible transition-all duration-300 hover-scale z-50">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-    </svg>
-</button>
+      .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
 
-<script>
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    html.classList.toggle('dark', currentTheme === 'dark');
+      .news-card {
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        border: 1px solid rgba(229, 231, 235, 1);
+      }
 
-    themeToggle.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-        localStorage.setItem('theme', newTheme);
-    });
+      .dark .news-card {
+        background: rgb(55, 65, 81);
+        border-color: rgb(75, 85, 99);
+      }
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+      .news-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
 
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+      .cta-section {
+        background: linear-gradient(135deg, #f59e0b, #d97706, #b45309);
+      }
 
-    // Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                // Close mobile menu if open
-                mobileMenu.classList.add('hidden');
-            }
-        });
-    });
+      /* Button Styles */
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        color: white;
+        font-weight: 600;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
 
-    // Back to Top Button
-    const backToTop = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTop.classList.remove('opacity-0', 'invisible');
-        } else {
-            backToTop.classList.add('opacity-0', 'invisible');
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+        background: linear-gradient(135deg, #d97706, #b45309);
+      }
+
+      .btn-primary-sm {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        color: white;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 10px rgba(245, 158, 11, 0.4);
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: white;
+        color: rgb(17, 24, 39);
+        border: 2px solid rgb(209, 213, 219);
+        font-weight: 600;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .dark .btn-secondary {
+        background: rgb(31, 41, 55);
+        color: white;
+        border-color: rgb(55, 65, 81);
+      }
+
+      .btn-secondary:hover {
+        transform: translateY(-2px);
+        border-color: #f59e0b;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-white {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: white;
+        color: #d97706;
+        font-weight: 600;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        background: #f9fafb;
+      }
+
+      .btn-outline-white {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        border: 2px solid white;
+        color: white;
+        font-weight: 600;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        background: transparent;
+      }
+
+      .btn-outline-white:hover {
+        background: white;
+        color: #d97706;
+      }
+
+      .social-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: rgb(31, 41, 55);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background-color: rgb(217, 119, 6);
+        transform: scale(1.1);
+      }
+
+      .footer-link {
+        color: rgb(209, 213, 219);
+        transition: color 0.3s ease;
+      }
+
+      .footer-link:hover {
+        color: rgb(251, 191, 36);
+      }
+
+      .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      /* Animations */
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
         }
-    });
-
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Header Background on Scroll
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-            header.classList.add('bg-white/98', 'dark:bg-gray-900/98');
-        } else {
-            header.classList.remove('bg-white/98', 'dark:bg-gray-900/98');
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-    });
+      }
 
-    // Animate elements on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-slideUp');
-            }
-        });
-    }, observerOptions);
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
 
-    // Observe all sections for animation
-    document.querySelectorAll('section > div').forEach(el => {
-        observer.observe(el);
-    });
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
 
-    // Form Submission (placeholder)
-    document.querySelector('form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for your message! We will get back to you soon.');
-    });
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .floating-element {
+          display: none;
+        }
 
-    // Collection Cards Click Event
-    document.querySelectorAll('[id="collections"] .group').forEach(card => {
-        card.addEventListener('click', () => {
-            const title = card.querySelector('h3').textContent;
-            alert(`Explore our ${title} - Coming Soon!`);
-        });
-    });
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
 
-    // News Articles Click Event
-    document.querySelectorAll('[id="news"] article').forEach(article => {
-        article.addEventListener('click', () => {
-            const title = article.querySelector('h3').textContent;
-            alert(`Reading: ${title} - Full article coming soon!`);
-        });
-    });
-</script>
-</body>
+        .collection-card:hover,
+        .news-card:hover,
+        .project-card:hover {
+          transform: none;
+        }
+      }
+
+      /* Dark mode specific styles */
+      .dark .hero-gradient-text {
+        background: linear-gradient(135deg, #fbbf24, #f59e0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .dark .floating-element-1 {
+        background: rgba(251, 191, 36, 0.2);
+      }
+
+      .dark .floating-element-2 {
+        background: rgba(251, 191, 36, 0.3);
+      }
+
+      .dark .floating-element-3 {
+        background: rgba(251, 191, 36, 0.4);
+      }
+    </style>
+  </body>
 </html>
